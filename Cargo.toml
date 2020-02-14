@@ -1,0 +1,20 @@
+[package]
+name = "tk"
+version = "0.1.0"
+authors = ["Jakob Lindskog <jakob.lindskog@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name="tk"
+
+[dependencies]
+png="0.15.3"
+structopt = { version = "0.3", default-features = false }
+atty = "0.2"
+
+[profile.release]
+lto = true
+panic = "abort"
+opt-level = 'z'
