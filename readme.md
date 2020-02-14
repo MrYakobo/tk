@@ -94,8 +94,8 @@ All possible combinations of usage of tk is shown below:
 
 | cmdline                | piped | arg1 | arg2 | preview | method                              |
 |------------------------|-------|------|------|---------|-------------------------------------|
-| `echo "a" | tk a.png`  | true  | png  |      |  false  | `encode(stdin, arg1)`               |
-| `echo "a" | tk -p`     | true  |      |      |  true   | `encode(stdin, tmpfile); show(t)`   |
+| `echo "a" \| tk a.png` | true  | png  |      |  false  | `encode(stdin, arg1)`               |
+| `echo "a" \| tk -p`    | true  |      |      |  true   | `encode(stdin, tmpfile); show(t)`   |
 | `tk a.txt -p`          | false | txt  |      |  true   | `encode(txt, tmpfile); show(t)`     |
 | `tk a.txt b.png`       | false | txt  | png  |  false  | `encode(txt, png)`                  |
 | `tk a.png`             | false | png  |      |  false  | `decode(png)`                       |
